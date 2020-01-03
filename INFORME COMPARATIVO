@@ -1,0 +1,12 @@
+#Informe comparativo.
+
+
+De lo que se pudo aprender en la tarea, cabe destacar que la documentacion que se tiene de Grpc si bien no esta toda focalizada 
+en un solo punto, con un poco de busqueda se puede encontrar todo lo necesario para construir codigo o arreglarlo sin ningun problema.
+por otro lado se tiene rabbitmq el cual nos entrega en su pagina muchos tutoriales de como utilizar de buena manera las librerias
+pero esto se hace problematico cuando se tiene algun bug a los cuales no se les encuentra una solucion. 
+
+En base a esto es que se puede concluir que: aunque rabbitmq nos entregue herramientas de buena calidad, la falta de lugares para 
+encontrar informacion hace de este una tarea mas dificil que Grpc, el cual mediante la utilizacion de RPC se encuentra algo mas
+cercano a algo conocido como una funcion, lo cual hace mas facil su uso. Así dejando mi opinion Grpc es una mejor tecnologia para
+este problema.
