@@ -1,0 +1,26 @@
+El sistema se construye con docker-compose build y docker-compose up
+
+
+TAREA1_1
+En la ventana se mostrará la informacion del server, para activar 1 o mas clientes se debe abrir otro terminal
+y ejecutar las siguientes lineas de codigo
+
+docker-compose exec send bash (si no funciona, escribir "sudo" al principio: sudo docker-compose...)
+python tarea2_client.py
+
+Luego por el terminal con el cliente se mostrara su nombre de usuario (Se escogío el numero del PID como nombre de usuario)
+y se le pregunta si quiere mandar un mensaje o hacer una accion,
+
+1) para mandar un mensaje se debe escribir el nombre del usuario seguido de un ; y acontinuacion el mensaje a enviar.
+
+Ej: 5860;Como estas?
+
+2) Existen dos acciones 
+
+a) !mensajes: la cual muestra todos lo mensajes mandados por el usuario que lo pida.
+b) !usuarios: el cual muestra todos los usuarios que han estado conectados.
+
+
+TAREA1_2
+
+Se tiene un programa que manda un mensaje de manera asincrona sin el uso de Docker.
