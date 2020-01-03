@@ -1,0 +1,7 @@
+FROM rabbitmq:latest
+RUN apt-get update \
+	&& apt-get -y install python3 \
+	&& apt-get -y install python3-pip \
+	&& python setup.py install
+
+COPY recieve.py /usr/bin/recieve.py

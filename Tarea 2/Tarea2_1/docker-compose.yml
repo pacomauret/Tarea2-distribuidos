@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  server:
+    build: 
+      context: ./server
+      dockerfile: Dockerfile1
+    image: s1
+    command: python /docker_tarea2/tarea2_server.py > textlogs.log
+    tty: true
+    volumes:
+      - ./server:/server
+    ports:
+      - "50051:50051"
+
+  send:
+    build:
+      context: ./cliente
+      dockerfile: Dockerfile2
+    image: c1
+    command: tail -f /dev/null
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./cliente:/cliente
+    depends_on:
+      - server
+
+

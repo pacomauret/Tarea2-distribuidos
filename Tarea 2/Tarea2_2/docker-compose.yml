@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  headnode:
+    build: 
+      context: ./
+      dockerfile: Dockerfile1
+    image: rabbitmq
+    command: python3 /usr/bin/recieve.py
+    ports:
+      - "5000:5000"
+

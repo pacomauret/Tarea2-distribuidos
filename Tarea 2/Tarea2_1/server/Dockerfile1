@@ -1,0 +1,14 @@
+FROM python:latest
+
+
+RUN python -m pip install grpcio \
+	&& python -m pip install grpcio-tools
+
+WORKDIR /docker_tarea2/
+
+ENV NAME World1
+
+COPY tarea2_server.py /docker_tarea2/tarea2_server.py
+COPY tarea2_pb2.py /docker_tarea2/tarea2_pb2.py
+COPY tarea2_pb2_grpc.py /docker_tarea2/tarea2_pb2_grpc.py
+

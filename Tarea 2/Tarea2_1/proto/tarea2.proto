@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.tareaRPC";
+option java_outer_classname = "TareaRPCProto";
+option objc_class_prefix = "RTG";
+
+package tareaRPC;
+
+service TareaRPC {
+	rpc Read_Message(Usuario) returns (Inbox) {}
+	rpc actualizar_usuarios(Usuario) returns (Confirmation) {}
+	rpc Send_Message(Destined_Message) returns (Confirmation) {}
+	rpc See_users(Usuario) returns (Inbox) {}
+	rpc See_messages(Usuario) returns (Inbox) {}
+
+}
+
+message Inbox {
+	string mensaje = 1;
+
+}
+
+
+message Usuario {
+	string name = 1;
+}
+
+message Destined_Message {
+	string name = 1;
+	string destino = 2;
+	string mensaje = 3;
+
+}
+
+message Confirmation {
+	string message = 1;
+}

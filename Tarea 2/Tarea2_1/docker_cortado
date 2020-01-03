@@ -1,0 +1,21 @@
+send:
+    build:
+      context: ./
+      dockerfile: Dockerfile2
+    image: ubuntu
+    command: python3 /usr/bin/tarea2_client.py
+    depends_on:
+      - server
+
+
+
+
+#DOCKERFILE
+
+RUN mkdir /docker_tarea2
+RUN mkdir -p /docker_tarea2/proto
+
+
+
+command: python /docker_tarea2/tarea2_client.py
+
